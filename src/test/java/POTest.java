@@ -7,9 +7,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 import pageobject.object.*;
 
-
-
-
 public class POTest extends POTestBase {
 
     @Feature(value = "Functional test")
@@ -21,7 +18,7 @@ public class POTest extends POTestBase {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
-        loginPage.attemptLogin("ttttt@mail.ru", "1234568");
+        loginPage.attemptLogin("ttttt@mail.ru", "123456");
 
         Assert.assertTrue(homePage.successMessageIsVisible(), "Login was unsuccessful");
 

@@ -55,13 +55,14 @@ public class POTestBase {
 
             try {
                 Allure.addAttachment(result.getTestName() + "screenshot", new FileInputStream(screenshot));
-                ReportPortal.emitLog(result.getTestName() + "screenshot", "ERROR",
-                        Calendar.getInstance().getTime(), screenshot);
+
 
             } catch (FileNotFoundException e) {
                 LOG.error("Could not take screenshot:" + e.getMessage());
             }
 
+            ReportPortal.emitLog(result.getTestName() + "screenshot", "ERROR",
+                    Calendar.getInstance().getTime(), screenshot);
 
 
             driver.quit();
