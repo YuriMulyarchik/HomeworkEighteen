@@ -19,7 +19,7 @@ public class HTMLETestBase {
 
     }
 
-    @AfterTest
+    @AfterMethod
     public void tearDown(){
 
     WebDriverContainer.closeDriver();
